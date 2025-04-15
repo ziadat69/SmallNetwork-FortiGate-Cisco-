@@ -1,0 +1,70 @@
+Portweiterleitung mit Virtual IP (VIP)
+
+
+Beispiel:
+
+    Externer Benutzer ruft auf: http://[öffentliche IP der FortiGate]:8080
+
+    Die Anfrage wird weitergeleitet an: 10.10.10.10:80 im internen DMZ-Netz
+
+
+
+
+1) 
+1. Erstellen einer Virtual IP (VIP)
+
+Navigiere zu:
+
+--->  Policy & Objects → Virtual IPs → Create New
+
+Fülle die folgenden Felder aus:
+
+    Name: web-server-vip
+
+    Interface: wan1 (die Schnittstelle, über die externe Verbindungen reinkommen)
+
+    External IP: 203.3.113.11 (die öffentliche IP der FortiGate)
+
+    External Port: 8080 (der Port, den externe Nutzer verwenden)
+
+    Mapped IP Address: 192.168.199.1 (die interne IP des Webservers in der DMZ)
+
+    Mapped Port: 80 (der Port, auf dem der Webserver tatsächlich hört)
+
+    Port Forwarding: ✅ Aktiviert
+
+➡️ Klicke anschließend auf OK
+
+
+______________________--------------_____________________________--------------____________________________
+2
+
+ Erstellen einer Firewall-Regel (Policy), um den Zugriff zu erlauben
+
+Navigiere zu:
+--->  Policy & Objects → Firewall Policy → Create New
+
+Gib folgende Einstellungen ein:
+
+    Incoming Interface: wan1
+
+    Outgoing Interface: dmz
+
+    Source: all (oder gib eine spezifische externe IP-Adresse an)
+
+    Destination: web-server-vip (der VIP, den du oben erstellt hast)
+
+    Service: HTTP (oder ALL, je nach Bedarf)
+
+    Action: ACCEPT
+
+    NAT: ❌ Nicht aktivieren (die IP wurde ja bereits über VIP umgesetzt)
+
+➡️ Klicke auf OK
+
+______________________--------------____________________________--------------_____________________________
+
+
+
+Wenn jemand von außen http://203.3.113.11:8080 aufruft,
+wird er automatisch an 192.168.199.1:80 weitergeleitet – deinen Webserver in der DMZ.
