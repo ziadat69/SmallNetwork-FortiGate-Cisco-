@@ -1,0 +1,36 @@
+
+FortiGate Interface-Konfiguration 
+
+
+1) Statische IP setzen
+
+config system interface
+    edit port1
+        set mode static
+        set ip 192.168.1.99/24
+        set allowaccess ping http https ssh
+    next
+end
+
+
+2) Administrative Zugriffe über Port1 aktivieren
+
+config system interface
+    edit port1
+        set allowaccess ping http https ssh
+    next
+end
+
+
+
+3)
+Wenn du eine statische IP gesetzt hast:
+
+    Öffne im Browser: https://192.168.1.99
+
+    Benutzername: admin (Standard)
+
+    Passwort: leer (oder dein gesetztes Passwort)
+
+
+
