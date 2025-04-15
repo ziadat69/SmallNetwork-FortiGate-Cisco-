@@ -1,0 +1,49 @@
+🛠️ Wie aktiviere ich IPS in FortiGate (GUI)?
+Schritt 1 – IPS aktivieren
+
+    Navigiere zu: System > Feature Visibility
+
+    Aktiviere: ✅ Intrusion Prevention System (IPS)
+
+Schritt 2 – Erstelle ein IPS-Profil
+
+    Security Profiles > Intrusion Prevention
+
+    Klicke auf Create New
+
+    Name: IPS_Strong_Security
+
+    Action: Block (statt nur Monitor)
+
+    Wähle relevante Bedrohungskategorien aus:
+
+        Exploits
+
+        Malware
+
+        Botnet Command and Control
+
+        DoS-Angriffe
+
+Schritt 3 – Binde das Profil an deine Firewall Policy
+
+    Policy & Objects > IPv4 Policy
+
+    Wähle z. B. LAN → WAN
+
+    Aktiviere: ✅ IPS
+
+    Wähle dein IPS-Profil aus
+
+🧪 Wie testest du IPS praktisch?
+
+    Besuche eine Testseite:
+    🔗 https://testmynids.org
+    → Diese löst absichtlich Angriffs-Signaturen aus.
+
+    Starte ein Scan mit z. B. nmap von einer VM:
+
+nmap -A <Ziel-IP>
+
+Beobachte die Logs unter:
+Log & Report > Intrusion Prevention
