@@ -1,0 +1,36 @@
+🛠️ SSL Deep Inspection einrichten (Schritt für Schritt)
+Schritt 1 – Funktion aktivieren
+
+    System > Feature Visibility
+
+    Aktiviere: ✅ SSL / SSH Inspection
+
+Schritt 2 – Zertifikat erstellen oder nutzen
+
+    System > Certificates
+
+    Lade das CA-Zertifikat herunter (z. B. Fortinet_CA)
+
+    Installiere es auf jedem Client im Netz
+
+        Windows: Trusted Root Certification Authorities
+
+        macOS: Schlüsselbund > Zertifikate
+
+Schritt 3 – SSL Profile erstellen
+
+    Security Profiles > SSL / SSH Inspection
+
+    Wähle: deep-inspection
+
+    Optional: Eigene Ausnahmen für Banken, Google, etc.
+
+Schritt 4 – Policy konfigurieren
+
+    Policy & Objects > IPv4 Policy
+
+    Wähle die relevante Policy
+
+    Aktiviere: ✅ SSL Inspection
+
+    Wähle: deep-inspection
