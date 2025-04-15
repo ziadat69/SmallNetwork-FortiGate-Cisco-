@@ -1,0 +1,35 @@
+🛠 Einrichtung in FortiGate (GUI)
+1. Expliziten Proxy aktivieren
+
+    Menü: System > Feature Visibility > Enable Explicit Proxy
+
+2. Proxy konfigurieren
+
+    Menü: Network > Explicit Proxy
+
+    Haken setzen bei: Enable Explicit Web Proxy
+
+    Port (z. B. 8080) aktivieren
+
+    Transparent oder explizit – je nach Bedarf
+
+3. Web Filter-Profil erstellen
+
+    Menü: Security Profiles > Web Filter > Create New
+
+    Benenne dein Profil z. B. „OfficeBlocker“
+
+    Wähle Kategorien aus, die gesperrt oder erlaubt sein sollen
+
+        z. B. „Adult“, „Social Media“, „Gambling“, „Streaming Media“
+
+    Füge ggf. manuelle URLs hinzu
+
+4. Web Filter-Profil zu einer Policy hinzufügen
+
+    Menü: Policy & Objects > IPv4 Policy
+
+    Bearbeite z. B. „LAN → WAN“-Regel
+
+    Unter „Security Profiles“: Web Filter aktivieren und dein Profil auswählen
+
