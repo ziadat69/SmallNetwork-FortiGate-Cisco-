@@ -42,6 +42,7 @@ ______________________--------------_____________________________--------------_
  Erstellen einer Firewall-Regel (Policy), um den Zugriff zu erlauben
 
 Navigiere zu:
+
 --->  Policy & Objects → Firewall Policy → Create New
 
 Gib folgende Einstellungen ein:
