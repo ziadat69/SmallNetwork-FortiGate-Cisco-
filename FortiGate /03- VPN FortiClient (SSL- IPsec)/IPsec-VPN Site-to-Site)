@@ -1,0 +1,48 @@
+🧰 IPsec-VPN – Standortverbindung (Site-to-Site)
+ Szenario:
+
+Zwei Standorte: Berlin ↔ Hamburg
+Ziel: Netzwerke miteinander verbinden.
+ Einrichtung in Berlin (Seite A)
+
+Gehe zu:
+VPN → IPsec Wizard → Site to Site
+
+    VPN-Name: berlin_to_hamburg
+
+    Remote Gateway: Static IP
+
+    IP: 123.123.123.123 (Hamburg)
+
+    Pre-Shared Key: mein_schlüssel
+
+    Lokales Netz: 192.168.1.0/24
+
+    Entferntes Netz: 192.168.2.0/24
+
+    Interface: wan1
+
+OK klicken.
+🪜 Einrichtung in Hamburg (Seite B)
+
+    VPN-Name: hamburg_to_berlin
+
+    IP: die IP von Berlin
+
+    Pre-Shared Key: gleich wie oben
+
+    Lokales Netz: 192.168.2.0/24
+
+    Entferntes Netz: 192.168.1.0/24
+
+OK klicken.
+
+📍 Wenn alles korrekt ist:
+VPN → IPsec Monitor → Status = Up ✅
+✅ Verbindung testen
+
+Von PC in Berlin:
+
+ping 192.168.2.1
+
+Wenn Antwort kommt → Verbindung ist aktiv.
