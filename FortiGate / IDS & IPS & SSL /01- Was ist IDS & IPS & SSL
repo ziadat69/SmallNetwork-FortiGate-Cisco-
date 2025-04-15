@@ -3,7 +3,17 @@ Begriff	Bedeutung	Funktion
 - IDS	Intrusion Detection System	Erkennt Angriffe, meldet sie, aber greift nicht aktiv ein
 - IPS	Intrusion Prevention System	Erkennt Angriffe und blockiert sie automatisch
 
+🧠 Grundprinzip:
 
+    FortiGate überwacht jeden Netzwerkverkehr, der durchgeht.
+
+    Es nutzt eine Signaturdatenbank bekannter Bedrohungen (z. B. Viren, Exploits, DoS).
+
+    Erkennt es eine Bedrohung, blockiert es diese (wenn IPS aktiv ist).
+
+    Dies schützt dein Netzwerk vor externen und internen Angriffen.
+
+___________________________________________________________________________________________________________
 
 🔐 Was ist SSL Inspection und warum braucht man sie?
 🔍 Problem:
