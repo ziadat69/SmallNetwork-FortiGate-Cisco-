@@ -7,7 +7,7 @@ FortiGate Interface-Konfiguration
 config system interface
     edit port1
         set mode static
-        set ip 192.168.1.99/24
+        set ip 172.16.232.156/24
         set allowaccess ping http https ssh
     next
 end
@@ -26,7 +26,7 @@ end
 3)
 Wenn du eine statische IP gesetzt hast:
 
-    Öffne im Browser: https://192.168.1.99
+    Öffne im Browser: https://172.16.232.156
 
     Benutzername: admin (Standard)
 
