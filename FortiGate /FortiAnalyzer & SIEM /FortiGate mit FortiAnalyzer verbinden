@@ -1,0 +1,46 @@
+FortiGate mit FortiAnalyzer verbinden
+
+1. Zugang zur FortiGate-Oberfläche (GUI)
+
+    Öffne den Browser und rufe die IP-Adresse deines FortiGate-Geräts auf.
+
+    Melde dich mit Admin-Zugangsdaten an.
+
+2. Log-Übertragung an FortiAnalyzer aktivieren
+
+    Gehe zu Log & Report → Log Settings.
+
+    Aktiviere:
+
+        Traffic Log
+
+        Event Log
+
+        Security Log
+
+    Aktiviere „Send Logs to FortiAnalyzer/FortiManager“.
+
+    Gib die IP-Adresse deines FortiAnalyzer-Geräts ein.
+
+3. FortiAnalyzer konfigurieren
+
+    Öffne ebenfalls die Web-GUI vom FortiAnalyzer (IP-Adresse im Browser).
+
+    Logge dich mit Admin-Daten ein.
+
+4. FortiGate-Gerät in FortiAnalyzer hinzufügen
+
+    Navigiere zu Device Manager.
+
+    Klicke auf Add Device.
+
+    Trage die FortiGate-Informationen ein:
+
+        Name
+
+        IP-Adresse
+
+        Seriennummer (findest du in FortiGate unter Dashboard > System Information)
+
+    Speichern.
+
