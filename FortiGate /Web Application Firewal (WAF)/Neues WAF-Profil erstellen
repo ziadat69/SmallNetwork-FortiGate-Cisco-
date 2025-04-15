@@ -1,0 +1,36 @@
+1) Neues WAF-Profil erstellen
+
+    Menü:
+  -->  Security Profiles → Web Application Firewall → Create New
+
+Wichtige Optionen:
+Einstellung	Beschreibung
+Name	                      z. B. MeinWAFProfil
+Signature Protection	      Aktivieren – schützt gegen bekannte Webangriffe
+Signature Set	Wähle:        OWASP_TOP_10 – beste Praxis-Signaturen
+URL Access Protection	      Bestimmte URLs sperren
+HTTP Protocol Constraints	  Schützt gegen Protokollmissbrauch
+Data Leak Prevention (DLP)	Verhindert Datenlecks (z. B. Kreditkartennummern)
+Cookie Security	            Schützt Cookies vor Manipulation
+
+    Speichern.
+
+
+2) WAF auf Firewall-Regel anwenden
+
+    Menü:
+   -->   Policy & Objects → IPv4 Policy → Webzugriffsregel bearbeiten
+
+Wichtige Punkte:
+
+Feld	Wert
+Quelle	z. B. all oder LAN
+Ziel	Webserver (IP oder VIP)
+Service	HTTP / HTTPS
+Action	ACCEPT
+NAT	Aktiviert (wenn nötig)
+WAF aktivieren	Wähle MeinWAFProfil
+
+
+
+
