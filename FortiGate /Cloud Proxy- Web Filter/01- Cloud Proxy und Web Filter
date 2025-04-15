@@ -1,0 +1,30 @@
+Cloud Proxy	Ein Proxy ist ein Vermittler zwischen dem Nutzer (Client) und dem Internet. 
+Ein Cloud Proxy bedeutet, dass dieser Vermittler entweder extern (in der Cloud) oder lokal (z. B. auf FortiGate) betrieben wird.
+
+
+Web Filter	Ein Webfilter prüft Webseitenanfragen (URLs), kategorisiert sie (z. B. "Soziale Netzwerke", "Malware",
+"Erwachseneninhalt") und erlaubt oder blockiert sie basierend auf Richtlinien.
+
+
+
+⚙️ Technischer Ablauf (Wie funktioniert das?)
+
+    Benutzer gibt eine URL im Browser ein (z. B. youtube.com)
+
+    Der Request geht zuerst an FortiGate (Proxy-Funktion)
+
+    FortiGate überprüft anhand der Web-Filter-Profile:
+
+        Welche Kategorie hat die Seite?
+
+        Ist diese Kategorie erlaubt?
+
+        Gibt es eine explizite Blockliste?
+
+    Entscheidung:
+
+        Zugriff erlaubt
+
+        Zugriff gesperrt (mit Hinweisseite)
+
+        Logging des Vorgangs
