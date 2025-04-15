@@ -1,0 +1,85 @@
+
+
+🛠 Schritt 1 – Voraussetzungen
+Komponente	Beispiel
+
+FortiGate Firewall	eingerichtet
+
+Zwei Webserver	192.168.1.10 und 192.168.1.11
+
+Client-Gerät	möchte auf Webseite zugreifen
+
+
+______________________________________________________________
+
+🧱 Schritt 2 – Virtuellen Server erstellen
+
+GUI-Pfad:
+Policy & Objects → Virtual Servers → Create New
+
+    Name: Web_LB
+
+    Interface: wan1
+
+    Type: HTTP
+
+    Virtual IP: 10.10.10.1
+
+    Real Servers:
+
+        Server1: 192.168.1.10:80
+
+        Server2: 192.168.1.11:80
+
+    Load Balance Method:
+
+        Round Robin (abwechselnd)
+
+        Least Connection (wenigste aktive Verbindungen)
+
+        Weighted (Gewichtung pro Server)
+
+→ ✅ Speichern
+✅ Schritt 3 – Health Check aktivieren
+
+In derselben Ansicht:
+
+    Health Check aktivieren
+
+    Typ: HTTP
+
+    Path: /index.html
+
+    Code: 200
+
+→ Damit prüft FortiGate, ob der Server verfügbar ist, bevor er Traffic schickt.
+📜 Schritt 4 – Firewall-Regel hinzufügen
+
+Pfad:
+Policy & Objects → IPv4 Policy → Create New
+
+    Name: Access_to_Web_LB
+
+    Incoming Interface: wan1
+
+    Outgoing Interface: internal
+
+    Source: all
+
+    Destination: Web_LB
+
+    Service: HTTP
+
+    Action: ACCEPT
+
+    NAT aktivieren
+
+→ ✅ Speichern
+🔎 Schritt 5 – Testen
+
+Rufe auf dem Client im Browser auf:
+
+http://10.10.10.1
+
+Jede neue Seite oder Refresh wird je nach Methode zu einem anderen Server geleitet.
+
