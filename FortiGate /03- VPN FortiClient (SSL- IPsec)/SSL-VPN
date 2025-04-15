@@ -1,0 +1,85 @@
+SSL-VPN – Benutzerzugriff via FortiClient
+
+Szenario:
+
+Ein Mitarbeiter arbeitet von zu Hause und will auf das Firmennetz zugreifen.
+
+
+Schritt für Schritt:
+✅ 1. Benutzer erstellen
+
+Gehe zu:
+User & Authentication → User Definition → Create New
+
+    Name: benutzer1
+
+    Passwort: (sicher wählen)
+
+OK klicken.
+✅ 2. Benutzergruppe erstellen
+
+Gehe zu:
+User & Authentication → User Groups → Create New
+
+    Gruppenname: ssl_vpn_users
+
+    Typ: Firewall
+
+    Benutzer hinzufügen: benutzer1
+
+OK klicken.
+✅ 3. SSL-VPN aktivieren
+
+VPN → SSL-VPN Settings
+
+    Interface: wan1
+
+    Port: 10443
+
+    Server-Zertifikat: Fortinet_Factory
+
+    Tunnel Mode: aktivieren
+
+    IP-Bereich: 10.10.10.0/24
+
+    DNS: 8.8.8.8
+
+    Source Interface: wan1
+
+    Destination: internal
+
+    Benutzergruppe erlauben: ssl_vpn_users
+
+Anwenden klicken.
+✅ 4. Firewall-Policy anlegen
+
+Policy & Objects → IPv4 Policy → Create New
+
+    Name: ssl-vpn-access
+
+    Eingehend: ssl.root
+
+    Ausgehend: lan
+
+    Quelle: ssl_vpn_users
+
+    Ziel: all
+
+    Dienst: ALL
+
+    Aktion: ACCEPT
+
+    NAT: ✅ aktiv
+
+OK klicken.
+✅ 5. FortiClient installieren
+
+    Download: https://www.fortinet.com/support/product-downloads
+
+    Typ: SSL VPN
+
+    Server: https://[deine-FortiGate-IP]:10443
+
+    Benutzername/Passwort: was du erstellt hast
+
+✅ Connect klicken → fertig!
