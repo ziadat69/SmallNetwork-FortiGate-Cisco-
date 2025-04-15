@@ -1,0 +1,17 @@
+Was ist IDS / IPS?
+Begriff	Bedeutung	Funktion
+- IDS	Intrusion Detection System	Erkennt Angriffe, meldet sie, aber greift nicht aktiv ein
+- IPS	Intrusion Prevention System	Erkennt Angriffe und blockiert sie automatisch
+
+
+
+🔐 Was ist SSL Inspection und warum braucht man sie?
+🔍 Problem:
+
+    90 % des Web-Traffics ist heute verschlüsselt (HTTPS).
+
+    Ohne SSL Inspection sieht FortiGate den Inhalt nicht.
+
+✅ Lösung:
+
+SSL Deep Inspection – FortiGate entschlüsselt, scannt und verschlüsselt den Traffic wieder.
