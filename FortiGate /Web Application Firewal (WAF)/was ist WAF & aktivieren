@@ -1,0 +1,26 @@
+WAF = Web Application Firewall
+Eine WAF schützt Webanwendungen vor Angriffen wie:
+* SQL-Injection
+* Cross-Site Scripting (XSS)
+* Cookie Poisoning
+* File Inclusion
+* Und viele andere Angriffe auf Anwendungsebene.
+📌 Normale Firewalls blockieren Verkehr auf Netzwerkebene (Layer 3/4),  WAF schützt speziell Web-Anwendungen (Layer 7).
+
+
+
+
+   FortiGate analysiert jede HTTP/HTTPS-Anfrage mithilfe eines Regelwerks:
+
+* ✅ Erkennt verdächtige Muster (Signaturen)
+* 🚫 Blockiert gefährliche Requests
+* 📝 Erstellt Logs und Reports
+* ⚙ Kann benutzerdefinierte Regeln anwenden
+ ___________________________________________
+
+WAF in FortiGate aktivieren (über GUI)
+
+
+✅ 1. Funktion aktivieren
+* Gehe zu: System → Feature Visibility
+* Aktiviere: ✅ Web Application Firewall
