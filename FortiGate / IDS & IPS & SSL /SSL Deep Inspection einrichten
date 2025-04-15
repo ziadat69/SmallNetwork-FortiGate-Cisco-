@@ -34,3 +34,15 @@ Schritt 4 – Policy konfigurieren
     Aktiviere: ✅ SSL Inspection
 
     Wähle: deep-inspection
+
+
+🧪 Test & Beobachtung:
+
+Test	                                      Ergebnis
+Besuche https://example.com/malware.zip	     Wird blockiert und geloggt
+Besuche z. B. https://google.com	         Warnung oder Fehler, falls Zertifikat fehlt
+SSL-Verbindung über Wireshark prüfen	     Entschlüsselt sichtbar für FortiGate
+
+Logs findest du unter:
+📍 Log & Report > SSL Inspection
+📍 Log & Report > Application Control
