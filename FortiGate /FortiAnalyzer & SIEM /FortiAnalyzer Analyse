@@ -1,0 +1,52 @@
+🔍 Analyse mit FortiAnalyzer
+
+1. Logs anzeigen
+
+    Gehe zu Log View im FortiAnalyzer.
+
+    Dort findest du:
+
+        Traffic Logs: Wer hat wann mit wem gesprochen?
+
+        Event Logs: Änderungen, Fehler, Admin-Login etc.
+
+        Security Logs: Erkannte Angriffe, geblockte Zugriffe etc.
+
+2. Filtern und durchsuchen
+
+    Du kannst nach bestimmten:
+
+        IP-Adressen
+
+        Benutzernamen
+
+        Angriffstypen
+
+        Zeiträumen suchen.
+
+3. Live-Verfolgung
+
+    Aktiviere „Real-Time Log“ um Live-Datenströme zu analysieren.
+
+    Ideal für Troubleshooting und Monitoring.
+
+📊 Automatische Berichte erstellen
+1. Vorlagen nutzen
+
+    Gehe zu Reports → Create Report.
+
+    Wähle eine Vorlage, z. B.:
+
+        Top 10 Threats
+
+        Web Traffic
+
+        VPN Usage
+
+    Berichte können als PDF generiert und automatisiert per E-Mail versendet werden.
+
+2. Eigene Reports gestalten
+
+    Du kannst individuelle Dashboards und Reports erstellen.
+
+    Grafiken, Tabellen, Zeitachsen usw. lassen sich kombinieren.
