@@ -1,0 +1,13 @@
+3) 
+📊 4. Logs & Reports ansehen
+
+    Menü:
+    Log & Report → Web Application Firewall
+
+Hier siehst du:
+
+    Welche Angriffe erkannt/blockiert wurden
+
+    Quell-IP, angegriffene URL, Art des Angriffs
+
+    Zeitstempel und Aktionen
