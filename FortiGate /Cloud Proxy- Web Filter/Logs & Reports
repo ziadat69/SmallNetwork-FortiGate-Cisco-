@@ -1,0 +1,11 @@
+Testen und Überprüfen
+
+    Öffne einen Browser auf einem Client-Rechner
+
+    Rufe eine erlaubte Seite auf (z. B. example.com) → sollte funktionieren
+
+    Rufe eine blockierte Seite auf (z. B. facebook.com) → sollte gesperrt werden
+
+    Überprüfe die Logs:
+
+        Log & Report > Forward Traffic oder Web Filter Log
