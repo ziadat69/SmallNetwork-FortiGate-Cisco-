@@ -1,0 +1,21 @@
+🧪 Load Balancing Methoden erklärt
+Methode	Beschreibung
+-- Round Robin	Verteilt Anfragen abwechselnd
+-- Least Connections	Schickt Traffic an Server mit wenigsten Verbindungen
+-- Weighted Round Robin	Server mit höherem Gewicht bekommen mehr Anfragen
+
+
+________________________________________________________________________________
+
+Monitoring – Überblick behalten
+
+Pfad:
+Dashboard → Load Balancer Monitor
+
+Hier siehst du:
+
+   - Welcher Server wie viele Verbindungen hat
+
+   - Ob ein Server offline ist
+
+   - Live-Status der Verteilung
